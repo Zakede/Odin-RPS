@@ -3,17 +3,16 @@ const choices = ["rock", "paper", "scissors"];
 var humanScore = 0;
 var computerScore = 0;
 
-function computerSelection() {
-    let computerSelection = choices[Math.floor(Math.random() * choices.length)];
+function getcomputerSelection() {
+    const computerSelection = choices[Math.floor(Math.random() * choices.length)];
     alert("Choose rock, paper or scissors.");
     return computerSelection;
 
 }
 
-
 function playRound() {
 
-    computerSelection();
+    let computerSelection = getcomputerSelection();
     let humanSelection = prompt("Enter your choice: ");
 
     if (humanSelection === computerSelection) {
@@ -36,6 +35,5 @@ function playRound() {
     console.log("Your Final Score is: " + humanScore);
 
 }
-
 
 playRound();
